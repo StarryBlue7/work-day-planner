@@ -34,3 +34,23 @@ function colorTimeBlocks() {
         };
     })
 }
+
+$('.saveBtn').on('click', saveEvent);
+
+function saveEvent(event) {
+    event.stopPropagation();
+
+    const newHour = $(this).siblings('.description').children('textarea').attr('data-hour');
+    const newDescription = $(this).siblings('.description').children('textarea').val();
+    const newEvent = {hour: newHour, description: newDescription};
+    
+    let schedule = JSON.parse(localStorage.getItem("schedule"));
+    if (schedule) {
+        schedule.push(newEvent);
+    } else {
+        schedule = [newEvent];
+    };
+
+    localStorage.setItem("schedule", JSON.stringify(schedule));
+}
+
