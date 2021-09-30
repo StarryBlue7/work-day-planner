@@ -7,7 +7,7 @@ function updateTime() {
     setInterval(() => {
         updateDayText();
         colorTimeBlocks();
-    }, 1000);
+    }, 30000);
 };
 
 function updateDayText() {
@@ -16,5 +16,21 @@ function updateDayText() {
 };
 
 function colorTimeBlocks() {
-    
+    $('textarea').each(function () {
+        let hourNow = moment().hour();
+        let blockHour = parseInt($(this).attr('data-hour'));
+        if (hourNow < blockHour) {
+            $(this).removeClass('future');
+            $(this).removeClass('present');
+            $(this).addClass('past');
+        } else if (hourNow > blockHour) {
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass('future');
+        } else {
+            $(this).removeClass('future');
+            $(this).removeClass('past');
+            $(this).addClass('present');
+        };
+    })
 }
