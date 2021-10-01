@@ -19,12 +19,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Great+Vibes&display=swap" rel="stylesheet">
+    
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 id="custom-h1" class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
@@ -32,7 +36,47 @@
     <div class="container">
       <div class="row time-block">
         <div class="hour col-1 d-flex justify-content-center align-items-center">9 AM</div>
-        <div class="description col-10 "><textarea data-hour="9"></textarea></div>
+        <div class="description col-10"><textarea class="text-dark" data-index="0"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">10 AM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="1"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">11 AM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="2"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">12 AM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="3"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">1 PM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="4"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">2 PM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="5"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">3 PM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="6"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">4 PM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="7"></textarea></div>
+        <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="hour col-1 d-flex justify-content-center align-items-center">5 PM</div>
+        <div class="description col-10 "><textarea class="text-dark" data-index="8"></textarea></div>
         <div class="saveBtn col-1 d-flex justify-content-center align-items-center"><i class="fas fa-save"></i></div>
       </div>
     </div>

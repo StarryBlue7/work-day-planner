@@ -4,6 +4,16 @@ body {
   line-height: 1;
 }
 
+#custom-h1 {
+  font-family: 'Ephesis', 'Open Sans', sans-serif;
+  font-size: 550%;
+  line-height: 60px;
+}
+
+#currentDay {
+  font-weight: bold;
+}
+
 textarea{
   background: transparent;
   border: none;
@@ -13,6 +23,7 @@ textarea{
   padding: 10px;
   width: 101.6%;
   height: 100%;
+  font-weight: bold;
 }
 
 .jumbotron {
