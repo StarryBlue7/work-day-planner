@@ -35,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Deployed Page
 
-* [See Live Site](https://starryblue7.github.io/quiz-game/)
+* [See Live Site](https://starryblue7.github.io/work-day-planner/)
 
 ## Author
 

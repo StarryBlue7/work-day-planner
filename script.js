@@ -1,5 +1,6 @@
 const startTime = 9;
 
+// Update events on page load and start timekeeper
 updateTime();
 updateEvents();
 
@@ -17,6 +18,7 @@ function updateDayText() {
     $('#currentDay').text(today);  
 }
 
+// Color-code timeblocks according to relation to present time
 function colorTimeBlocks() {
     $('textarea').each(function () {
         let hourNow = moment().hour();
@@ -37,6 +39,7 @@ function colorTimeBlocks() {
     });
 }
 
+// Save entered events to local storage
 $('.saveBtn').on('click', saveEvent);
 
 function saveEvent(event) {
@@ -56,6 +59,7 @@ function saveEvent(event) {
     updateEvents();
 }
 
+// Get events from local storage and display on timeblocks
 function updateEvents() {
     let schedule = JSON.parse(localStorage.getItem("schedule"));
     if (!schedule) {
@@ -68,6 +72,7 @@ function updateEvents() {
     });
 }
 
+// Create empty schedule object if none in local storage
 function buildDay() {
     let schedule = [];
     for (let hour = 9; hour <= 17; hour++) {
